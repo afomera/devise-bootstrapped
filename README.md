@@ -1,41 +1,37 @@
 # Devise::Bootstrapped
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/devise/bootstrapped`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem tries to give you a nicer place to start with your views for your Devise model when you're using Bootstrap 3.
 
-TODO: Delete this and the text above, and describe your gem
+You can find usage information below, but the gist of it is you'll run `rails g devise:views:bootstrapped` instead of the normal devise:views.
+
+If you want to switch back to what Devise gives you no problem! Just remove the devise views folder and run the normal Devise generator command.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'devise-bootstrapped'
+gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install devise-bootstrapped
 
 ## Usage
 
-TODO: Write usage instructions here
+To use the Bootstrap views generator you'll want to have Devise and Bootstrap installed per normal installation... and once you have installed Devise and generated your user model you can copy over the views with
 
-## Development
+`rails generate devise:views:bootstrapped`
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+If you've already generated the Devise views you can use the -f argument to force an override but that will erase any of the changes you've made!
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/devise-bootstrapped. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/king601/devise-bootstrapped. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
