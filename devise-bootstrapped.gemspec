@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["andrew@zerlex.net"]
 
   spec.summary       = %q{Generates nicer views for Devise that use Bootstrap}
-  spec.description   = %q{ This gem generates a nicer default views styled with Bootstrap so you have a bit of a nicer starting point for your app. }
+  spec.description   = %q{ This gem generates nicer default views styled with Bootstrap so you have a bit of a better starting point for your app. }
   spec.homepage      = "https://github.com/king601/devise-bootstrapped"
   spec.license       = "MIT"
 
