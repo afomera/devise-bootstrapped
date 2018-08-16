@@ -1,0 +1,51 @@
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+  # If true, strings which span multiple lines using \ for continuation must
+  # use the same type of quotes on each line.
+  ConsistentQuotesInMultiline: false
+
+Layout/AlignParameters:
+  # Alignment of parameters in multi-line method calls.
+  #
+  # The `with_first_parameter` style aligns the following lines along the same
+  # column as the first parameter.
+  #
+  #     method_call(a,
+  #                 b)
+  #
+  # The `with_fixed_indentation` style aligns the following lines with one
+  # level of indentation relative to the start of the line with the method call.
+  #
+  #     method_call(a,
+  #       b)
+  EnforcedStyle: with_fixed_indentation
+  SupportedStyles:
+    - with_first_parameter
+    - with_fixed_indentation
+  # By default, the indentation width from Style/IndentationWidth is used
+  # But it can be overridden by setting this parameter
+  # IndentationWidth: ~
+
+Metrics/LineLength:
+  Max: 132
+  # To make it possible to copy or click on URIs in the code, we allow lines
+  # containing a URI to be longer than Max.
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+  # The IgnoreCopDirectives option causes the LineLength rule to ignore cop
+  # directives like '# rubocop: enable ...' when calculating a line's length.
+  IgnoreCopDirectives: true
+  # The IgnoredPatterns option is a list of !ruby/regexp and/or string
+  # elements. Strings will be converted to Regexp objects. A line that matches
+  # any regular expression listed in this option will be ignored by LineLength.
+  IgnoredPatterns: []
+
+# Rails 5 only requires 2.2.2.
+AllCops:
+  TargetRubyVersion: 2.3
