@@ -3,7 +3,7 @@ require 'rails/generators'
 module Devise
   module Views
     class BootstrapFormGenerator < Rails::Generators::Base
-      desc "Copies views styled for Bootstrap 3"
+      desc "Copies views styled for Bootstrap 4 via the `bootstrap_form` gem"
 
       source_root File.expand_path("../../../..", __FILE__)
 

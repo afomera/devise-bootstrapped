@@ -1,5 +1,5 @@
 require "devise/bootstrap-form/version"
-require "devise/generators/bootstrap-form_generator"
+require "devise/generators/bootstrap_form_generator"
 
 module Devise
   module BootstrapForm
