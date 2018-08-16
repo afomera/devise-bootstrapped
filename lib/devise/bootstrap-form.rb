@@ -1,3 +1,5 @@
+require "rails/railtie"
+require "rails/engine/railties"
 require "devise/bootstrap-form/version"
 require "devise/generators/bootstrap_form_generator"
 
