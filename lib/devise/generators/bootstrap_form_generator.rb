@@ -1,11 +1,13 @@
-require 'rails/generators'
+# frozen_string_literal: true
+
+require "rails/generators"
 
 module Devise
   module Views
     class BootstrapFormGenerator < Rails::Generators::Base
       desc "Copies views styled for Bootstrap 4 via the `bootstrap_form` gem"
 
-      source_root File.expand_path("../../../..", __FILE__)
+      source_root File.expand_path("../../..", __dir__)
 
       def copy_views
         directory "app/views/devise", "app/views/devise"

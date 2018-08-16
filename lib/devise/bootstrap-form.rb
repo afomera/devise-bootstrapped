@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rails/railtie"
 require "rails/engine/railties"
 require "devise/bootstrap-form/version"
