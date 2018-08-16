@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Devise::Bootstrapped do
+describe Devise::BootstrapForm do
   it 'has a version number' do
-    expect(Devise::Bootstrapped::VERSION).not_to be nil
+    expect(Devise::BootstrapForm::VERSION).not_to be nil
   end
 
   it 'does something useful' do

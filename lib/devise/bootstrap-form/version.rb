@@ -1,5 +1,5 @@
 module Devise
-  module Bootstrapped
+  module BootstrapForm
     VERSION = "0.1.1"
   end
 end

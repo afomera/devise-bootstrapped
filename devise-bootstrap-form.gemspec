@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'devise/bootstrapped/version'
+require 'devise/bootstrap-form/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "devise-bootstrapped"
-  spec.version       = Devise::Bootstrapped::VERSION
-  spec.authors       = ["Andrew Fomera"]
-  spec.email         = ["andrew@zerlex.net"]
+  spec.name          = "devise-bootstrap-form"
+  spec.version       = Devise::BootstrapForm::VERSION
+  spec.authors       = ["Andrew Fomera", "Larry Reid"]
+  spec.email         = ["larry.reid@jadesystems.ca"]
 
-  spec.summary       = %q{Generates nicer views for Devise that use Bootstrap}
-  spec.description   = %q{ This gem generates nicer default views styled with Bootstrap so you have a bit of a better starting point for your app. }
-  spec.homepage      = "https://github.com/king601/devise-bootstrapped"
+  spec.summary       = %q{Generates nicer views for Devise that use Bootstrap via the `bootstrap_form` gem.}
+  spec.description   = %q{ This gem generates nicer default views styled with Bootstrap via the `bootstrap_form` gem, so you have a bit of a better starting point for your app. }
+  spec.homepage      = "https://github.com/lcreid/devise-bootstrap-form"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
