@@ -9,8 +9,7 @@
       <%= f.email_field :email, autofocus: false, class: 'form-control' %>
       <%= f.password_field :password,
             autocomplete: "off",
-            label: password_label,
-            help: "(<%= @minimum_password_length %> characters minimum)" %>
+            help: "(#{@minimum_password_length} characters minimum)" %>
       <%= f.password_field :password_confirmation,
             autocomplete: "off",
             label_class: "required" %>
