@@ -5,21 +5,21 @@
     <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
 
-      <%= f.email_field :email, class: 'form-control'  %>
+      <%= f.email_field :email %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
 
-      <%= f.password_field :password, autocomplete: "off", class: 'form-control'  %>
-
-      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'  %>
-
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-      <%= f.password_field :current_password, autocomplete: "off", class: 'form-control'  %>
+      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "required" %>
+      <%= f.password_field :current_password,
+                           autocomplete: "off",
+                           class: "required",
+                           help: "We need your current password to confirm your changes." %>
 
       <div class="form-group">
-        <%= f.submit "Update", class: 'btn btn-lg btn-block btn-primary' %>
+        <%= f.submit "Update", class: "btn btn-lg btn-block btn-primary" %>
       </div>
     <% end %>
     <hr>
