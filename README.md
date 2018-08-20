@@ -20,7 +20,7 @@ gem 'devise-bootstrap-form'
 
 And then execute:
 ```bash
-bundle
+bundle install
 ```
 
 ## Usage
