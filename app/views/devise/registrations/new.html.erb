@@ -14,7 +14,9 @@
             autocomplete: "off",
             label_class: "required" %>
 
-      <%= f.submit "Sign up", class: "btn btn-primary btn-block btn-lg" %>
+      <div class="form-group">
+        <%= f.submit "Sign up", class: "btn btn-primary btn-block btn-lg" %>
+      </div>
     <% end %>
     <div class="text-center">
       <%= render "devise/shared/links" %>
