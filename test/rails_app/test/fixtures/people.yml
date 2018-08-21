@@ -1,0 +1,13 @@
+existing_user:
+  email: "existing_user@example.com"
+  encrypted_password: <%= Person.new.send(:password_digest, "password") %>
+  reset_password_token:
+  reset_password_sent_at:
+  remember_created_at:
+  confirmation_token:
+  confirmed_at: <%= Time.zone.now - 1.hour %>
+  confirmation_sent_at: <%= Time.zone.now - 2.hours %>
+  unconfirmed_email:
+  failed_attempts: 0
+  unlock_token:
+  locked_at:

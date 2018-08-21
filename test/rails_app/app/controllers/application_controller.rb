@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def authenticate_person!
-    puts "In my authenticate_person!"
+  # https://stackoverflow.com/a/16364926/3109926
+  def authenticate_person!(options = {})
     if person_signed_in?
       super
     else

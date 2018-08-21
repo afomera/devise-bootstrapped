@@ -1,7 +1,13 @@
 # frozen_string_literal: true
 
-require "minitest/autorun"
-require "action_view"
+ENV['RAILS_ENV'] ||= 'test'
+
+require "devise"
+require "rails_app/config/environment"
+require "rails/test_helper"
+# require "action_view"
+# require "devise"
+# require "devise/app/controllers/devise/registrations_controller"
 
 class Test < ActionView::TestCase
   class User
