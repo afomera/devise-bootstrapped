@@ -2,7 +2,7 @@
 
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "devise/bootstrap-form/version"
+require "devise/bootstrap_form/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "devise-bootstrap-form"
@@ -33,6 +33,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "devise"
   spec.add_development_dependency "bundler", "~> 1.12"
-  spec.add_development_dependency "rails"
   spec.add_development_dependency "rake", "~> 10.0"
 end
