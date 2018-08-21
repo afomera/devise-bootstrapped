@@ -31,7 +31,9 @@ To use the Bootstrap views generator you'll want to have Devise installed per no
 rails generate devise:views:bootstrap-form
 ```
 
-If you've already generated the Devise views you can use the `-f` argument to force an override, but that will erase any of the changes you've made to the views!
+TODO: Figure out if we're going to generate mailer views or nto.
+
+If you've already generated the Devise views you can use the `-f` argument to force an override, but that will erase any of the changes you've made to the views.
 
 ## Contributing
 
