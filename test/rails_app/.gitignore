@@ -25,3 +25,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# This is a test app. Don't commit the generated views.
+app/views/devise
