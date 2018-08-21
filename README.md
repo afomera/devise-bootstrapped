@@ -35,7 +35,9 @@ If you've already generated the Devise views you can use the `-f` argument to fo
 
 ## Contributing
 
-This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Code of Conduct](http://github.com/lcreid/devise-bootstrap-form/blob/master/CODE_OF_CONDUCT.md).
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+Refer to the [CONTRIBUTING](devise-bootstrap-form/blob/master/CODE_OF_CONDUCT.md) document for more details.
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/lcreid/devise-bootstrap-form.
 
