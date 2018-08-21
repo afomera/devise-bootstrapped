@@ -1,13 +1,14 @@
 <div class="row">
-  <div class="col-sm-4 col-sm-offset-4">
+  <div class="col-sm-4 offset-sm-4">
     <h2 class="text-center">Resend confirmation instructions</h2>
 
     <%= bootstrap_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>
 
       <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
-      <%# FIXME: Make the submit button formatting consistent on all forms. %>
-      <%= f.submit "Resend confirmation instructions", class: 'btn btn-primary btn-lg btn-block' %>
+      <%= f.form_group do %>
+        <%= f.submit "Resend confirmation instructions", class: 'btn btn-primary btn-lg btn-block' %>
+      <% end %>
     <% end %>
 
     <div class="text-center">

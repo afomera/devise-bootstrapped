@@ -1,18 +1,19 @@
 <div class="row">
-  <div class="col-sm-4 col-sm-offset-4">
+  <div class="col-sm-4 offset-sm-4">
     <h1 class="text-center">Log in</h1>
-    <hr>
     <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <%= f.email_field :email, autofocus: true, placeholder: 'Email Address', class: 'form-control' %>
-      <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control' %>
+      <%= f.email_field :email, autofocus: true, placeholder: 'Email Address' %>
+      <%= f.password_field :password, autocomplete: "off", placeholder: 'Password' %>
 
       <% if devise_mapping.rememberable? -%>
-        <%= f.check_box :remember_me %>
+        <%= f.form_group do %>
+          <%= f.check_box :remember_me %>
+        <% end %>
       <% end -%>
 
-      <div class="form-group">
+      <%= f.form_group do %>
         <%= f.submit "Log in", class: "btn btn-primary btn-block btn-lg" %>
-      </div>
+      <% end %>
     <% end %>
     <div class="text-center">
       <%= render "devise/shared/links" %>
