@@ -1,4 +1,5 @@
 ## Testing
+### Manual and Exploratory Testing
 There is a test app in `test/rails_app`.
 
 To use the `devise-bootstrap-form` gem:
@@ -24,6 +25,14 @@ To go back to using the gem from RubyGems:
 
 ```
 bundle config --delete local.YOUR_GEM_NAME
+```
+
+### Automated Testing
+There are a number of automated system tests in the `test/rails_app/test` directory. To run the tests:
+
+```
+cd test/rails_app
+rails test:system
 ```
 
 ## Gotchas
