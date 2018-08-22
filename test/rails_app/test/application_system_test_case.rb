@@ -12,4 +12,9 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
   Capybara.app_host = "http://localhost:3001"
 
   driven_by :selenium, using: :headless_chrome, screen_size: [1400, 1400]
+
+  def setup
+    super
+    `cd test/rails_app; rails g devise:views:bootstrap_form -f`
+  end
 end
