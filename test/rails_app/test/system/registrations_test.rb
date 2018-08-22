@@ -5,6 +5,7 @@ require "application_system_test_case"
 class RegistrationsTest < ApplicationSystemTestCase
   test "Sign up workflow" do
     visit new_person_registration_url
+    assert_selector "div.form-group", count: 4
     assert_selector "h2", text: "Sign up"
     assert_field "Email"
     assert_field "Password"
@@ -49,6 +50,7 @@ class RegistrationsTest < ApplicationSystemTestCase
 
     visit edit_person_registration_url
     assert_selector "h2", text: "Edit Person"
+    assert_selector "div.form-group", count: 5
     assert_field "Email"
     assert_field "Password"
     assert_field "Password confirmation"

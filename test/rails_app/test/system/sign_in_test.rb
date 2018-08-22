@@ -5,6 +5,7 @@ require "application_system_test_case"
 class SignInTest < ApplicationSystemTestCase
   test "can navigate to sign in" do
     visit new_person_session_url
+    assert_selector "div.form-group", count: 4
     assert_selector "h2", text: "Log in"
     assert_field "Email"
     assert_field "Password"

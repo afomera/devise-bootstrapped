@@ -5,6 +5,7 @@ require "application_system_test_case"
 class PasswordsTest < ApplicationSystemTestCase
   test "Forgot your password workflow" do
     visit new_person_password_url
+    assert_selector "div.form-group", count: 2
     assert_selector "h2", text: "Forgot your password?"
     assert_field "Email"
     assert_button "Send me reset password instructions"
@@ -22,6 +23,7 @@ class PasswordsTest < ApplicationSystemTestCase
     open_email person.email
     current_email.click_link "Change my password"
 
+    assert_selector "div.form-group", count: 3
     assert_selector "h2", text: "Change your password"
     assert_field "New password"
     assert_field "Confirm new password"

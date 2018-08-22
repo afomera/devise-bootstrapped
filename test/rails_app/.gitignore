@@ -28,3 +28,5 @@
 
 # This is a test app. Don't commit the generated views.
 app/views/devise
+
+Gemfile.lock

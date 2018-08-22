@@ -3,7 +3,7 @@
 require "test_helper"
 
 class BootstrapFormTest < ActiveSupport::TestCase
-  def test_has_a_version_number
+  test "has a version number" do
     refute_nil Devise::BootstrapForm::VERSION
   end
 
