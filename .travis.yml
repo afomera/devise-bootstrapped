@@ -2,4 +2,9 @@ sudo: false
 language: ruby
 rvm:
   - 2.5.1
+services:
+  - postgresql
 before_install: gem install bundler -v 1.12.5
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database rails_app_test;' -U postgres
