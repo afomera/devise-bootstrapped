@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/lcreid/rails-bootstrap-form.git
-  revision: 6eca2bc7613582556f51346324cd9546cafd2ddb
+  revision: badce5f78c4376e0fa9ebee43804236d9f8be743
   branch: master
   specs:
     devise-bootstrap-form (0.0.1)
