@@ -44,7 +44,7 @@ end
 gem 'bootstrap', '~> 4.0.0'
 gem "bootstrap_form", ">= 4.0.0.alpha1"
 gem 'devise'
-gem 'devise-bootstrap-form', github: "lcreid/rails-bootstrap-form", branch: "master"
+gem 'devise-bootstrap-form', github: "lcreid/devise-bootstrap-form", branch: "master"
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.

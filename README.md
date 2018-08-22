@@ -12,16 +12,21 @@ If you're just looking for Bootstrap markup on your Devise views, and don't want
 
 ## Installation
 
-Add this line to your application's `Gemfile`:
+Add these lines to your application's `Gemfile`:
 
 ```ruby
-gem 'devise-bootstrap-form'
+gem 'bootstrap', '~> 4.0'
+gem "bootstrap_form", ">= 4.0.0.alpha1"
+gem 'devise'
+gem 'devise-bootstrap-form', github: "lcreid/devise-bootstrap-form"
 ```
 
 And then execute:
 ```bash
 bundle install
 ```
+
+There are additional installation instructions for both [`bootstrap_form`](https://github.com/bootstrap-ruby/bootstrap_form#installation) and [`bootstrap`](https://github.com/twbs/bootstrap-rubygem#a-ruby-on-rails) that yu must complete before using `devise-bootstrap-form`.
 
 ## Usage
 
