@@ -6,5 +6,5 @@ services:
   - postgresql
 before_install: gem install bundler -v 1.12.5
 before_script:
-  - cp config/database.yml.travis config/database.yml
+  - cp test/rails_app/config/database.yml.travis test/rails_app/config/database.yml
   - psql -c 'create database rails_app_test;' -U postgres
