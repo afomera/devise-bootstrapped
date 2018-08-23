@@ -11,9 +11,9 @@ Gem::Specification.new do |spec|
   spec.email         = ["larry.reid@jadesystems.ca"]
 
   spec.summary       = "Generates nicer views for Devise that use Bootstrap via the `bootstrap_form` gem."
-  spec.description   = <<~DESC
-    This gem generates nicer default views styled with Bootstrap via the `bootstrap_form`
-    gem, so you have a bit of a better starting point for your app.
+  spec.description   = <<-DESC
+This gem generates nicer default views styled with Bootstrap via the `bootstrap_form`
+gem, so you have a bit of a better starting point for your app.
   DESC
   spec.homepage      = "https://github.com/lcreid/devise-bootstrap-form"
   spec.license       = "MIT"
