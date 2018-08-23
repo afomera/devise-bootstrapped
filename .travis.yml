@@ -8,8 +8,8 @@ addons:
   chrome: stable
 before_install:
   - gem install bundler -v 1.12.5
-  # - # start your web application and listen on `localhost`
-  # - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - # start your web application and listen on `localhost`
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 before_script:
   - cp test/rails_app/config/database.yml.travis test/rails_app/config/database.yml
   - psql -c 'create database rails_app_test;' -U postgres
