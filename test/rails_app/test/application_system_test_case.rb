@@ -18,8 +18,10 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
 
   def setup
     super
-    # puts "Tasks: #{Rake::Task.tasks}"
-    # Rake.application["devise:views:bootstrap_form"].tap(&:invoke).tap(&:reenable)
-    `cd test/rails_app; rails g devise:views:bootstrap_form -f`
+    # Run the generator every time, to make sure the views are up to date, but don't
+    # delete them at the end of the test, so we can see what we were looking at if we
+    # run a single failing test.
+    Rails::Generators.invoke("devise:views", %w[-v mailer -q])
+    Rails::Generators.invoke("devise:views:bootstrap_form", %w[-f -q])
   end
 end
