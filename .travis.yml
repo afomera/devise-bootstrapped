@@ -1,6 +1,23 @@
-sudo: false
 language: ruby
 rvm:
-  - 2.5.1
+  - 2.2.9
+  - 2.3.6
+  - 2.4.3
+  - 2.5.0
 before_install:
-  - gem install bundler -v 1.12.5
+  - gem update --system
+  - gem install bundler --no-document
+
+matrix:
+  include:
+    # Bleeding edge
+    - rvm: ruby-head
+
+    # Running one job to execute DANGER bot
+    - rvm: 2.5.0
+      script:
+        - gem install danger
+        - danger
+
+  allow_failures:
+    - rvm: ruby-head
