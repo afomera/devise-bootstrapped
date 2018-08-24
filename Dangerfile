@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Adapted from https://github.com/ruby-grape/danger/blob/master/Dangerfile
 # Q: What is a Dangerfile, anyway? A: See http://danger.systems/
 
@@ -22,7 +24,7 @@ if has_lib_changes && !has_test_changes
   warn("There are code changes, but no corresponding tests. "\
        "Please include tests if this PR introduces any modifications in "\
        "#{project_name}'s behavior.",
-       :sticky => false)
+    sticky: false)
 end
 
 # ------------------------------------------------------------------------------
@@ -51,4 +53,4 @@ end
 #       :sticky => false
 #     )
 #   end
-end
+# end
