@@ -6,7 +6,7 @@ It also makes the Devise views simpler, because the code to define forms using `
 
 You can find usage information below, but the gist of it is you'll run `rails g devise:views:bootstrap-form` instead of the normal `rails g devise:views`.
 
-If you want to switch back to what Devise gives you, no problem. Just remove the `app/views/devise` folder and run the normal Devise `rails g devise:views` generator command.
+If you want to switch back to what Devise gives you, no problem. Just remove the `app/views/devise` folder. You will then use the default Devise views, or you can run the normal Devise `rails g devise:views` generator command and customize the default Devise views.
 
 If you're just looking for Bootstrap markup on your Devise views, and don't want to use `bootstrap_form`, then you should look into the [`devise-bootstrapped`](https://github.com/king601/devise-bootstrapped) gem, or one of its forks.
 
@@ -30,7 +30,7 @@ There are additional installation instructions for both [`bootstrap_form`](https
 
 ## Usage
 
-To use the Bootstrap views generator you'll want to have Devise installed per normal installation. Once you have installed Devise and generated your user model you can generate the views with:
+To use the Bootstrap views generator you'll want to have Devise installed per normal installation. Once you've installed Devise and generated your user model you can generate the views with:
 
 ```bash
 rails generate devise:views:bootstrap-form
@@ -43,6 +43,20 @@ Generate the mailer views from normal Devise, as they're not included in `devise
 ```bash
 rails generate devise:views -v mailer
 ```
+
+## Layout
+
+Each of the views in enclosed in the following:
+
+```
+<div class="row justify-content-around">
+  <div class="col-12 col-sm-8 col-lg-6">
+    <!-- the view... -->
+  </div>
+</div>
+```
+
+You may want to adjust to your own tastes. Since the views use Bootstrap rows and columns, they need to be enclosed in a `div` with class `container`. We assume that you've done that in your layout.
 
 ## Contributing
 

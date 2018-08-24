@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="col-sm-4 offset-sm-4">
+<div class="row justify-content-around">
+  <div class="col-12 col-sm-8 col-lg-6">
     <h2 class="text-center">Log in</h2>
     <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <%= f.email_field :email, autofocus: true, placeholder: 'Email Address' %>

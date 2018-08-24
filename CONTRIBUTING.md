@@ -1,17 +1,16 @@
+## Contributing
+If you find a bug or have an idea for a feature:
+
+1. Search the issues to see if the bug has been found, or the feature has already been requested. If so, feel free to add your constructive input to the existing issue. Otherwise...
+2. Create an issue describing the bug or feature. We welcome contributions from people like you, so if you want to submit a pull request for the bug or feature, say so in the description of the issue.
+3. If you want to submit a pull request, we recommend you wait a few days until we respond to the issue. There is a small chance that we might feel that the feature isn't appropriate for this gem.
+4. If you don't want to submit your own pull request, your issue is still welcome and we'll review it and respond appropriately.
+
 ## Testing
 ### Manual and Exploratory Testing
 There is a test app in `test/rails_app`.
 
 To use the `devise-bootstrap-form` gem:
-
-```
-cd test/rails_app
-bundle config --local local.rails-bootstrap-form ../rails-bootstrap-form
-```
-
-(See https://rossta.net/blog/how-to-specify-local-ruby-gems-in-your-gemfile.html.)
-
-Then you can:
 
 ```
 cd rails_app
@@ -21,18 +20,9 @@ rails s -b 0.0.0.0 &
 # Navigate to localhost:3000/people/sign_in
 ```
 
-To go back to using the gem from RubyGems:
-
-```
-bundle config --delete local.YOUR_GEM_NAME
-```
-
 ### Automated Testing
-There are a number of automated system tests in the `test/rails_app/test` directory. To run the tests:
-
 ```
-cd test/rails_app
-rails test:system
+bundle exec rake
 ```
 
 ## Gotchas
