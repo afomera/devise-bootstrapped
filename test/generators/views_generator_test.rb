@@ -12,14 +12,11 @@ class ViewsGeneratorTest < Rails::Generators::TestCase
     assert_files
   end
 
-  def assert_files(scope = nil, options={})
+  # The original in Devise is here: https://github.com/plataformatec/devise/blob/3b0bc08ec67dd073ddd6d043c71646c2784ced6c/test/generators/views_generator_test.rb#L77
+  def assert_files(scope = nil)
     scope = "devise" if scope.nil?
-    # mail_template_engine = options[:mail_template_engine] || "html.erb"
 
     assert_file "app/views/#{scope}/confirmations/new.html.erb"
-    # assert_file "app/views/#{scope}/mailer/confirmation_instructions.#{mail_template_engine}"
-    # assert_file "app/views/#{scope}/mailer/reset_password_instructions.#{mail_template_engine}"
-    # assert_file "app/views/#{scope}/mailer/unlock_instructions.#{mail_template_engine}"
     assert_file "app/views/#{scope}/passwords/edit.html.erb"
     assert_file "app/views/#{scope}/passwords/new.html.erb"
     assert_file "app/views/#{scope}/registrations/new.html.erb"
