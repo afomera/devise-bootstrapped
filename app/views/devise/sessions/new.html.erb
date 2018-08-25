@@ -2,8 +2,8 @@
   <div class="col-12 col-sm-8 col-lg-6">
     <h2 class="text-center">Log in</h2>
     <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <%= f.email_field :email, autofocus: true, placeholder: 'Email Address' %>
-      <%= f.password_field :password, autocomplete: "off", placeholder: 'Password' %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password' %>
 
       <% if devise_mapping.rememberable? -%>
         <%= f.form_group do %>

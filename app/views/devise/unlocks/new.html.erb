@@ -5,7 +5,7 @@
     <%= bootstrap_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>
 
-      <%= f.email_field :email, autofocus: true %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       <%= f.form_group do %>
         <%= f.submit "Resend unlock instructions", class: "btn btn-primary btn-block btn-lg" %>
       <% end %>

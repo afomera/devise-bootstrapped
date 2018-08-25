@@ -5,7 +5,10 @@
     <%= bootstrap_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>
 
-      <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+      <%= f.email_field :email,
+                        autofocus: true,
+                        autocomplete: "email",
+                        value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
       <%= f.form_group do %>
         <%= f.submit "Resend confirmation instructions", class: 'btn btn-primary btn-lg btn-block' %>
       <% end %>

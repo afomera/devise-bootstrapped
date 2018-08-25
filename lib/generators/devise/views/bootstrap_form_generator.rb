@@ -18,6 +18,7 @@ module Devise
           directory dir, "app/views/devise/#{dir}"
         end
 
+        # FIXME: Make this figure out if `devise_invitable` is installed.
         # if BootstrapFormGenerator.invitable
           %w[invitations mailer].each do |dir|
             directory dir, "app/views/devise/#{dir}"

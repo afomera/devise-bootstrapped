@@ -8,10 +8,13 @@
 
       <%= f.password_field :password,
                            autofocus: true,
-                           autocomplete: "off",
+                           autocomplete: "new-password",
                            help: "(#{@minimum_password_length} characters minimum)",
                            label: "New password" %>
-      <%= f.password_field :password_confirmation, label: "Confirm new password", autocomplete: "off", class: "required" %>
+      <%= f.password_field :password_confirmation,
+                           label: "Confirm new password",
+                           autocomplete: "off",
+                           class: "required" %>
       <%= f.form_group do %>
         <%= f.submit "Change my password", class: 'btn btn-primary btn-block btn-lg' %>
       <% end %>
