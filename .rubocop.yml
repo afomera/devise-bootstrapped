@@ -6,6 +6,8 @@ Style/StringLiterals:
   # If true, strings which span multiple lines using \ for continuation must
   # use the same type of quotes on each line.
   ConsistentQuotesInMultiline: false
+  Exclude:
+    - "test/rails_app/app/mailers/*"
 
 Layout/AlignParameters:
   # Alignment of parameters in multi-line method calls.
@@ -53,21 +55,24 @@ AllCops:
   TargetRubyVersion: 2.2
   # TargetRubyVersion: <%= RUBY_VERSION[/\d+\.\d+/] %>
   Exclude:
-    - "test/rails_app/**/*"
+    # - "test/rails_app/**/*"
     - Capfile
     - Gemfile
-    - "test/rails_app/bin/*"
+    - "test/rails_app/bin/**/*"
+    - "test/rails_app/config/**/*"
     - test/rails_app/config.ru
-    - test/rails_app/config/boot.rb
-    - test/rails_app/config/application.rb
-    - test/rails_app/config/environment.rb
-    - "test/rails_app/config/environments/*"
-    - "test/rails_app/config/initializers/*"
-    - test/rails_app/db/schema.rb
-    - "test/rails_app/node_modules/**/*"
-    - "test/rails_app/bower_components/**/*"
+    - "test/rails_app/db/**/*"
+    - "test/rails_app/log/**/*"
     - "test/rails_app/tmp/**/*"
     - "test/rails_app/vendor/**/*"
+    # - test/rails_app/config/boot.rb
+    # - test/rails_app/config/application.rb
+    # - test/rails_app/config/environment.rb
+    # - "test/rails_app/config/environments/*"
+    # - "test/rails_app/config/initializers/*"
+    # - test/rails_app/db/schema.rb
+    - "test/rails_app/node_modules/**/*"
+    - "test/rails_app/bower_components/**/*"
     - test/rails_app/Gemfile
     - test/rails_app/Guardfile
     - test/rails_app/Rakefile
