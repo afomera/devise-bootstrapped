@@ -1,0 +1,11 @@
+<h2 class="text-center"><%= t "devise.invitations.new.header" %></h2>
+
+<%= bootstrap_form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post} do |f| %>
+  <%= devise_error_messages! %>
+
+<% resource.class.invite_key_fields.each do |field| -%>
+  <%= f.text_field field %>
+<% end -%>
+
+  <%= f.submit t("devise.invitations.new.submit_button"), class: "btn btn-primary btn-lg btn-block" %>
+<% end %>

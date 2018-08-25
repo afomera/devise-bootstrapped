@@ -12,4 +12,4 @@
 # For some reason, the test cases generate the mailer views in this directory,
 # as well as the `test/rails_app/app/views/devise/mailer` directory.
 # TODO: Figure out why and stop it from happening.
-app/views/devise/mailer/
+# app/views/devise/mailer/

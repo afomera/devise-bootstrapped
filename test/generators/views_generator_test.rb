@@ -10,6 +10,14 @@ class ViewsGeneratorTest < Rails::Generators::TestCase
   test "generate views" do
     run_generator
     assert_files
+    assert_no_invitable_files
+  end
+
+  test "generate views with invitable" do
+    Devise::Views::BootstrapFormGenerator.invitable = true
+    run_generator
+    assert_files
+    assert_invitable_files
   end
 
   # The original in Devise is here: https://github.com/plataformatec/devise/blob/3b0bc08ec67dd073ddd6d043c71646c2784ced6c/test/generators/views_generator_test.rb#L77
@@ -24,5 +32,21 @@ class ViewsGeneratorTest < Rails::Generators::TestCase
     assert_file "app/views/#{scope}/sessions/new.html.erb"
     assert_file "app/views/#{scope}/shared/_links.html.erb"
     assert_file "app/views/#{scope}/unlocks/new.html.erb"
+  end
+
+  def assert_invitable_files(scope = nil)
+    scope = "devise" if scope.nil?
+
+    assert_file "app/views/#{scope}/invitations/edit.html.erb"
+    assert_file "app/views/#{scope}/invitations/new.html.erb"
+    assert_file "app/views/#{scope}/mailer/invitation_instructions.html.erb"
+    assert_file "app/views/#{scope}/mailer/invitation_instructions.text.erb"
+  end
+
+  def assert_no_invitable_files(scope = nil)
+    assert_no_file "app/views/#{scope}/invitations/edit.html.erb"
+    assert_no_file "app/views/#{scope}/invitations/new.html.erb"
+    assert_no_file "app/views/#{scope}/mailer/invitation_instructions.html.erb"
+    assert_no_file "app/views/#{scope}/mailer/invitation_instructions.text.erb"
   end
 end
