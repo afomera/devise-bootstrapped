@@ -44,6 +44,7 @@ end
 gem 'bootstrap', '~> 4.0.0'
 gem "bootstrap_form", ">= 4.0.0.alpha1"
 gem 'devise'
+gem 'devise_invitable'
 gem 'devise-bootstrap-form', path: "../.."
 
 group :development do

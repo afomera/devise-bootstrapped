@@ -1,13 +1,17 @@
-<h2><%= t 'devise.invitations.edit.header' %></h2>
+<div class="row justify-content-around">
+  <div class="col-12 col-sm-8 col-lg-6">
+    <h2><%= t 'devise.invitations.edit.header' %></h2>
 
-<%= bootstrap_form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :invitation_token, readonly: true %>
+    <%= bootstrap_form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.hidden_field :invitation_token, readonly: true %>
 
-  <% if f.object.class.require_password_on_accepting %>
-  <%= f.password_field :password %>
-  <%= f.password_field :password_confirmation, class: "required" %>
-  <% end %>
+      <% if f.object.class.require_password_on_accepting %>
+      <%= f.password_field :password %>
+      <%= f.password_field :password_confirmation, class: "required" %>
+      <% end %>
 
-  <%= f.submit t("devise.invitations.edit.submit_button"), class: "btn btn-primary btn-lg btn-block" %>
-<% end %>
+      <%= f.submit t("devise.invitations.edit.submit_button"), class: "btn btn-primary btn-lg btn-block" %>
+    <% end %>
+  </div>
+</div>

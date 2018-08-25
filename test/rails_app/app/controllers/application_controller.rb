@@ -2,7 +2,7 @@
 
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_action :authenticate_person!, unless: :devise_controller?
+  before_action :authenticate_person!, unless: :devise_controller? || :devise_invitable_controller?
 
   protected
 
