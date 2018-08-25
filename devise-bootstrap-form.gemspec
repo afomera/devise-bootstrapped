@@ -13,8 +13,12 @@ Gem::Specification.new do |spec|
   spec.summary       = "Generates nicer views for Devise that use Bootstrap via the `bootstrap_form` gem."
   # rubocop:disable Layout/IndentHeredoc
   spec.description   = <<-DESC
-This gem generates nicer default views styled with Bootstrap via the `bootstrap_form`
-gem, so you have a bit of a better starting point for your app.
+This gem generates Devise views styled with Bootstrap via the `bootstrap_form`
+gem. If you plan to use, or are using, `bootstrap_form` in your app, your Devise
+forms will be consistent with the rest of your forms.
+
+The generator will detect if you're using `devise_invitable`, and generate `bootstrap_form`
+forms for its views as well.
   DESC
   # rubocop:enable Layout/IndentHeredoc
   spec.homepage      = "https://github.com/lcreid/devise-bootstrap-form"
