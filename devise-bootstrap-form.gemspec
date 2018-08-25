@@ -11,16 +11,18 @@ Gem::Specification.new do |spec|
   spec.email         = ["larry.reid@jadesystems.ca"]
 
   spec.summary       = "Generates nicer views for Devise that use Bootstrap via the `bootstrap_form` gem."
+  # rubocop:disable Layout/IndentHeredoc
   spec.description   = <<-DESC
 This gem generates nicer default views styled with Bootstrap via the `bootstrap_form`
 gem, so you have a bit of a better starting point for your app.
   DESC
+  # rubocop:enable Layout/IndentHeredoc
   spec.homepage      = "https://github.com/lcreid/devise-bootstrap-form"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
+  if spec.respond_to?(:metadata) # rubocop:disable Style/GuardClause
     spec.metadata["allowed_push_host"] = "https://rubygems.org"
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."

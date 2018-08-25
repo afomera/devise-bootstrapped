@@ -48,4 +48,26 @@ Metrics/LineLength:
 
 # Rails 5 only requires 2.2.2.
 AllCops:
-  TargetRubyVersion: 2.3
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.2
+  # TargetRubyVersion: <%= RUBY_VERSION[/\d+\.\d+/] %>
+  Exclude:
+    - "test/rails_app/**/*"
+    - Capfile
+    - Gemfile
+    - "test/rails_app/bin/*"
+    - test/rails_app/config.ru
+    - test/rails_app/config/boot.rb
+    - test/rails_app/config/application.rb
+    - test/rails_app/config/environment.rb
+    - "test/rails_app/config/environments/*"
+    - "test/rails_app/config/initializers/*"
+    - test/rails_app/db/schema.rb
+    - "test/rails_app/node_modules/**/*"
+    - "test/rails_app/bower_components/**/*"
+    - "test/rails_app/tmp/**/*"
+    - "test/rails_app/vendor/**/*"
+    - test/rails_app/Gemfile
+    - test/rails_app/Guardfile
+    - test/rails_app/Rakefile

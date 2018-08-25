@@ -2,6 +2,6 @@
 
 require "minitest/autorun"
 
-ENV['RAILS_ENV'] ||= 'test'
+ENV["RAILS_ENV"] ||= "test"
 
 require "devise/bootstrap_form"

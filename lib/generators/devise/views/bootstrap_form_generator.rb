@@ -4,6 +4,7 @@ require "rails/generators"
 
 module Devise
   module Views
+    # Generates Devise and Devise Invitable forms using `bootstrap_form` helpers.
     class BootstrapFormGenerator < Rails::Generators::Base
       class << self
         attr_accessor :invitable
@@ -20,9 +21,9 @@ module Devise
 
         # FIXME: Make this figure out if `devise_invitable` is installed.
         # if BootstrapFormGenerator.invitable
-          %w[invitations mailer].each do |dir|
-            directory dir, "app/views/devise/#{dir}"
-          end
+        %w[invitations mailer].each do |dir|
+          directory dir, "app/views/devise/#{dir}"
+        end
         # end
       end
     end

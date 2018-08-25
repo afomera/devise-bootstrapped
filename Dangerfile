@@ -7,8 +7,8 @@
 # Additional pull request data
 # ------------------------------------------------------------------------------
 project_name = github.pr_json["base"]["repo"]["name"]
-pr_number = github.pr_json["number"]
-pr_url = github.pr_json["_links"]["html"]["href"]
+# pr_number = github.pr_json["number"]
+# pr_url = github.pr_json["_links"]["html"]["href"]
 
 # ------------------------------------------------------------------------------
 # What changed?
