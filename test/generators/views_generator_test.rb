@@ -8,14 +8,15 @@ class ViewsGeneratorTest < Rails::Generators::TestCase
   setup :prepare_destination
 
   test "generate views" do
-    run_generator
+    Devise::Views::BootstrapFormGenerator.invitable = false
+    puts run_generator
     assert_files
     assert_no_invitable_files
   end
 
   test "generate views with invitable" do
     Devise::Views::BootstrapFormGenerator.invitable = true
-    run_generator
+    puts run_generator
     assert_files
     assert_invitable_files
   end
@@ -44,6 +45,8 @@ class ViewsGeneratorTest < Rails::Generators::TestCase
   end
 
   def assert_no_invitable_files(scope = nil)
+    scope = "devise" if scope.nil?
+
     assert_no_file "app/views/#{scope}/invitations/edit.html.erb"
     assert_no_file "app/views/#{scope}/invitations/new.html.erb"
     assert_no_file "app/views/#{scope}/mailer/invitation_instructions.html.erb"
