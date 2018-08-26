@@ -7,12 +7,8 @@ module Devise
     # Generates Devise and Devise Invitable forms using `bootstrap_form` helpers.
     class BootstrapFormGenerator < Rails::Generators::Base
       class << self
-        def invitable=(value)
-          @invitable = value
-        end
-
         def invitable
-          defined?(@invitable) ? @invitable : true
+          Object.const_get(:DeviseInvitable).is_a?(Module) rescue false # rubocop:disable Style/RescueModifier
         end
       end
 
@@ -25,7 +21,6 @@ module Devise
           directory dir, "app/views/devise/#{dir}"
         end
 
-        # FIXME: Make this figure out if `devise_invitable` is installed.
         if BootstrapFormGenerator.invitable
           %w[invitations mailer].each do |dir|
             directory dir, "app/views/devise/#{dir}"

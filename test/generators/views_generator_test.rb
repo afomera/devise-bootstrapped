@@ -7,16 +7,19 @@ class ViewsGeneratorTest < Rails::Generators::TestCase
   destination File.expand_path("../../tmp", __dir__)
   setup :prepare_destination
 
+  # When debugging generators, don't forget that `run_generator` *returns* the output
+  # of the generator. So any debugging output you put in the generator won't be seen,
+  # unless you explicitly `puts` (or soemthing) the return value of `run_generator`.
+
   test "generate views" do
-    Devise::Views::BootstrapFormGenerator.invitable = false
-    puts run_generator
+    run_generator
     assert_files
     assert_no_invitable_files
   end
 
   test "generate views with invitable" do
-    Devise::Views::BootstrapFormGenerator.invitable = true
-    puts run_generator
+    module ::DeviseInvitable; end; # rubocop:disable Style/ClassAndModuleChildren
+    run_generator
     assert_files
     assert_invitable_files
   end
