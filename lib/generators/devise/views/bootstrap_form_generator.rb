@@ -30,6 +30,10 @@ module Devise
 
       def copy_assets
         directory "assets/stylesheets", "app/assets/stylesheets"
+        # puts "copy_assets: #{File.read "/tmp/app/assets/stylesheets/application.scss"}"
+        append_to_file "app/assets/stylesheets/application.scss" do
+          '@import "devise_bootstrap_form";'
+        end
       end
     end
   end
