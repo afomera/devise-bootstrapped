@@ -28,5 +28,7 @@
 
 # This is a test app. Don't commit the generated views.
 app/views/devise
+# Nor the generated stylesheet.
+app/assets/stylesheets/devise_bootstrap_form.scss
 
 Gemfile.lock
