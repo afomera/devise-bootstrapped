@@ -44,19 +44,56 @@ Generate the mailer views from normal Devise, as they're not included in `devise
 rails generate devise:views -v mailer
 ```
 
-## Layout
+## Generated Layout
 
-Each of the views in enclosed in the following:
+Each of the forms in enclosed in the following:
 
 ```
-<div class="row justify-content-around">
-  <div class="col-12 col-sm-8 col-lg-6">
-    <!-- the view... -->
+<div class="devise-bootstrap-form">
+  <div class="devise-bootstrap-form-row">
+    <div class="devise-bootstrap-form-col">
+      <!-- the form... -->
+    </div>
   </div>
 </div>
 ```
 
-You may want to adjust to your own tastes. Since the views use Bootstrap rows and columns, they need to be enclosed in a `div` with class `container`. We assume that you've done that in your layout.
+The generator also generates `app/assets/stylesheets/devise_bootstrap_form.scss` that contains the following:
+
+```
+.devise-bootstrap-form {
+  @extend .container;
+}
+
+.devise-bootstrap-form-col {
+  @extend .col-12;
+  @extend .col-sm-8;
+  @extend .col-lg-6;
+}
+
+.devise-bootstrap-form-row {
+  @extend .row;
+  @extend .justify-content-around;
+}
+```
+
+You may want to adjust to your own tastes. For example, if the layout used by your Devise views already wraps the view in a `.container`, you can remove the:
+
+```
+.devise-bootstrap-form {
+  @extend .container;
+}
+```
+
+from `app/assets/stylesheets/devise_bootstrap_form.scss` file.
+
+Of course, you can also modify the views to change the surrounding `div`s to your needs.
+
+If you don't want the `devise_bootstrap_form`-generated styles at all, remove the following line from `app/asserts/application.scss`:
+
+```
+@include "devise_bootstrap_form.scss";
+```
 
 ## Contributing
 

@@ -1,27 +1,29 @@
-<div class="row justify-content-around">
-  <div class="col-12 col-sm-8 col-lg-6">
-    <h2 class="text-center">Change your password</h2>
+<div class="devise-bootstrap-form">
+  <div class="devise-bootstrap-form-row">
+    <div class="devise-bootstrap-form-col">
+      <h2 class="text-center">Change your password</h2>
 
-    <%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-      <%= devise_error_messages! %>
-      <%= f.hidden_field :reset_password_token %>
+      <%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+        <%= f.hidden_field :reset_password_token %>
 
-      <%= f.password_field :password,
-                           autofocus: true,
-                           autocomplete: "new-password",
-                           help: "(#{@minimum_password_length} characters minimum)",
-                           label: "New password" %>
-      <%= f.password_field :password_confirmation,
-                           label: "Confirm new password",
-                           autocomplete: "off",
-                           class: "required" %>
-      <%= f.form_group do %>
-        <%= f.submit "Change my password", class: 'btn btn-primary btn-block btn-lg' %>
+        <%= f.password_field :password,
+                             autofocus: true,
+                             autocomplete: "new-password",
+                             help: "(#{@minimum_password_length} characters minimum)",
+                             label: "New password" %>
+        <%= f.password_field :password_confirmation,
+                             label: "Confirm new password",
+                             autocomplete: "off",
+                             class: "required" %>
+        <%= f.form_group do %>
+          <%= f.submit "Change my password", class: 'btn btn-primary btn-block btn-lg' %>
+        <% end %>
       <% end %>
-    <% end %>
 
-    <div class="text-center">
-      <%= render "devise/shared/links" %>
+      <div class="text-center">
+        <%= render "devise/shared/links" %>
+      </div>
     </div>
   </div>
 </div>

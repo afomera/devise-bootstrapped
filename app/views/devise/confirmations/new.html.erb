@@ -1,21 +1,23 @@
-<div class="row justify-content-around">
-  <div class="col-12 col-sm-8 col-lg-6">
-    <h2 class="text-center">Resend confirmation instructions</h2>
+<div class="devise-bootstrap-form">
+  <div class="devise-bootstrap-form-row">
+    <div class="devise-bootstrap-form-col">
+      <h2 class="text-center">Resend confirmation instructions</h2>
 
-    <%= bootstrap_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-      <%= devise_error_messages! %>
+      <%= bootstrap_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
 
-      <%= f.email_field :email,
-                        autofocus: true,
-                        autocomplete: "email",
-                        value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
-      <%= f.form_group do %>
-        <%= f.submit "Resend confirmation instructions", class: 'btn btn-primary btn-lg btn-block' %>
+        <%= f.email_field :email,
+                          autofocus: true,
+                          autocomplete: "email",
+                          value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+        <%= f.form_group do %>
+          <%= f.submit "Resend confirmation instructions", class: 'btn btn-primary btn-lg btn-block' %>
+        <% end %>
       <% end %>
-    <% end %>
 
-    <div class="text-center">
-      <%= render "devise/shared/links" %>
+      <div class="text-center">
+        <%= render "devise/shared/links" %>
+      </div>
     </div>
   </div>
 </div>
