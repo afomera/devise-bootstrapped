@@ -7,7 +7,7 @@ require "devise/bootstrap_form/version"
 Gem::Specification.new do |spec|
   spec.name          = "devise-bootstrap-form"
   spec.version       = Devise::BootstrapForm::VERSION
-  spec.authors       = ["Andrew Fomera", "Larry Reid"]
+  spec.authors       = ["Larry Reid"]
   spec.email         = ["larry.reid@jadesystems.ca"]
 
   spec.summary       = "Generates nicer views for Devise that use Bootstrap via the `bootstrap_form` gem."
