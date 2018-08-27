@@ -4,7 +4,7 @@ require "test_helper"
 
 class ViewsGeneratorTest < Rails::Generators::TestCase
   tests Devise::Views::BootstrapFormGenerator
-  destination File.expand_path("../../tmp", __dir__)
+  destination File.expand_path("/tmp", __dir__)
   setup :prepare_destination
 
   # When debugging generators, don't forget that `run_generator` *returns* the output
@@ -12,6 +12,7 @@ class ViewsGeneratorTest < Rails::Generators::TestCase
   # unless you explicitly `puts` (or soemthing) the return value of `run_generator`.
 
   test "generate views" do
+    Object.send(:remove_const, :DeviseInvitable) if (Object.const_get(:DeviseInvitable).is_a?(Module) rescue false) # rubocop:disable Style/RescueModifier
     run_generator
     assert_files
     assert_no_invitable_files
