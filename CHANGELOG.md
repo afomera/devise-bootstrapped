@@ -1,4 +1,4 @@
-## [Pending Release][]
+## [Pending Release][0.1.0]
 
 ### Breaking changes
 
