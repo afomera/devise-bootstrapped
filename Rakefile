@@ -2,7 +2,7 @@
 
 require "bundler/gem_tasks"
 require "rake/testtask"
-require 'rubocop/rake_task'
+require "rubocop/rake_task"
 
 Rake::TestTask.new(:test) do |t|
   t.libs << "test"
@@ -16,3 +16,8 @@ RuboCop::RakeTask.new(:lint) do |task|
 end
 
 task default: %i[test lint]
+
+require "chandler/tasks"
+
+# Add chandler as a prerequisite for `rake release`
+task "release:rubygem_push" => "chandler:push"

@@ -17,8 +17,8 @@ This gem generates Devise views styled with Bootstrap via the `bootstrap_form`
 gem. If you plan to use, or are using, `bootstrap_form` in your app, your Devise
 forms will be consistent with the rest of your forms.
 
-The generator will detect if you're using `devise_invitable`, and generate `bootstrap_form`
-forms for its views as well.
+The generator will detect if you're using `devise_invitable`, and will generate
+`bootstrap_form` forms for its views as well.
   DESC
   # rubocop:enable Layout/IndentHeredoc
   spec.homepage      = "https://github.com/lcreid/devise-bootstrap-form"
@@ -41,5 +41,6 @@ forms for its views as well.
   spec.add_dependency "devise"
   spec.add_dependency "rails", ">= 5.0.0"
   spec.add_development_dependency "bundler", "~> 1.12"
+  spec.add_development_dependency "chandler"
   spec.add_development_dependency "rake", "~> 10.0"
 end

@@ -21,9 +21,24 @@ rails s -b 0.0.0.0 &
 ```
 
 ### Automated Testing
+
 ```
-bundle exec rake
+rake test
 ```
 
 ## Gotchas
 To test that the views work for a model other than the default `User`, the test app uses `Person` as the Devise model. It's a bit frustrating to remember that you can't just cut and paste examples that assume the model is `User`.
+
+## Coding guidelines
+
+This project uses [RuboCop](https://github.com/bbatsov/rubocop) to enforce standard Ruby coding
+guidelines. The coding standards are close to the out-of-the-box RuboCop standards. The main differences are:
+
+* We prefer double-quoted strings
+* We allow 132 characters per line
+* We don't lint most of the Rails-generated files in the test application
+
+Note the Travis build will fail and your PR cannot be merged if the linter finds errors
+
+* Test that your contributions pass with `rake lint`
+* The linter is also run as part of the default rake task `rake`
