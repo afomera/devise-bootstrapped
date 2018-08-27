@@ -11,9 +11,7 @@ Rake::TestTask.new(:test) do |t|
 end
 
 desc "Run RuboCop lint checks"
-RuboCop::RakeTask.new(:lint) do |task|
-  task.options = ["--lint"]
-end
+RuboCop::RakeTask.new(:lint)
 
 task default: %i[test lint]
 

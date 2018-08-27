@@ -76,3 +76,13 @@ AllCops:
     - test/rails_app/Gemfile
     - test/rails_app/Guardfile
     - test/rails_app/Rakefile
+
+Metrics/BlockLength:
+  Exclude:
+    - devise-bootstrap-form.gemspec
+
+# TODO: Remove this when minimum Ruby is 2.3.
+Layout/IndentHeredoc:
+  Exclude:
+    - Dangerfile
+    - devise-bootstrap-form.gemspec

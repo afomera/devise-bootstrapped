@@ -21,7 +21,7 @@ module Devise
           directory File.join("views/devise", dir), "app/views/devise/#{dir}"
         end
 
-        if BootstrapFormGenerator.invitable
+        if BootstrapFormGenerator.invitable # rubocop:disable Style/GuardClause
           %w[invitations mailer].each do |dir|
             directory File.join("views/devise", dir), "app/views/devise/#{dir}"
           end
@@ -30,7 +30,6 @@ module Devise
 
       def copy_assets
         directory "assets/stylesheets", "app/assets/stylesheets"
-        # puts "copy_assets: #{File.read "/tmp/app/assets/stylesheets/application.scss"}"
         append_to_file "app/assets/stylesheets/application.scss" do
           '@import "devise_bootstrap_form";'
         end
