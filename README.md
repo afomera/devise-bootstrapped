@@ -15,8 +15,9 @@ Add these lines to your application's `Gemfile`:
 ```ruby
 gem 'bootstrap', '~> 4.0'
 gem "bootstrap_form", ">= 4.0.0.alpha1"
-gem 'devise'
-gem 'devise-bootstrap-form', github: "lcreid/devise-bootstrap-form"
+gem 'devise' # gem 'devise-i18n'
+# gem 'devise_invitable'
+gem 'devise-bootstrap-form'
 ```
 
 And then execute:
@@ -24,7 +25,8 @@ And then execute:
 bundle install
 ```
 
-There are additional installation instructions for [`bootstrap_form`](https://github.com/bootstrap-ruby/bootstrap_form#installation),  [`bootstrap`](https://github.com/twbs/bootstrap-rubygem#a-ruby-on-rails), and [`devise`](https://github.com/plataformatec/devise) that you must complete before using `devise-bootstrap-form`.
+There are additional installation instructions for [`bootstrap_form`](https://github.com/bootstrap-ruby/bootstrap_form#installation),  [`bootstrap`](https://github.com/twbs/bootstrap-rubygem#a-ruby-on-rails), [`devise`](https://github.com/plataformatec/devise) that you must complete before using `devise-bootstrap-form`, and
+[`devise-i18n`](https://github.com/tigrish/devise-i18n).
 
 ## Usage
 
@@ -94,6 +96,11 @@ If you don't want the `devise_bootstrap_form`-generated styles at all, remove th
 ```
 @include "devise_bootstrap_form.scss";
 ```
+
+## Internationalization
+If your `Gemfile` includes `devise-i18n`, `devise-bootstrap-form` will generate views with translations. If you're also using `devise_invitable`, you have to manually copy its translations into your application from the [`devise_invitable` wiki](https://github.com/scambra/devise_invitable/wiki/I18n).
+
+Also, don't forget to add `gem "rails-i18n"` to your `Gemfile`.
 
 ## Contributing
 

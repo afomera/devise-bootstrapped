@@ -1,0 +1,20 @@
+<div class="devise-bootstrap-form">
+  <div class="devise-bootstrap-form-row">
+    <div class="devise-bootstrap-form-col">
+      <h2 class="text-center"><%= t('.resend_unlock_instructions') %></h2>
+
+      <%= bootstrap_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
+
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.form_group do %>
+          <%= f.submit t('.resend_unlock_instructions'), class: "btn btn-primary btn-block btn-lg" %>
+        <% end %>
+      <% end %>
+
+      <div class="text-center">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

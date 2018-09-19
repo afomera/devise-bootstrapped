@@ -1,0 +1,24 @@
+<div class="devise-bootstrap-form">
+  <div class="devise-bootstrap-form-row">
+    <div class="devise-bootstrap-form-col">
+      <h2 class="text-center"><%= t('.sign_in') %></h2>
+      <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password' %>
+
+      <% if devise_mapping.rememberable? -%>
+        <%= f.form_group do %>
+        <%= f.check_box :remember_me %>
+      <% end %>
+      <% end -%>
+
+      <%= f.form_group do %>
+      <%= f.submit t('.sign_in'), class: "btn btn-primary btn-block btn-lg" %>
+      <% end %>
+      <% end %>
+      <div class="text-center">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

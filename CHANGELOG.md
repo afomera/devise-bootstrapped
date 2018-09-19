@@ -1,4 +1,4 @@
-## [Pending Release][0.1.1]
+## [Pending Release][0.2.0]
 
 ### Breaking changes
 
@@ -6,6 +6,7 @@
 
 ### New features
 
+* Initial support for internationalization. 
 * Your contribution here!
 
 ### Bugfixes

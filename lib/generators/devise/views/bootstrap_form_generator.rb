@@ -10,6 +10,10 @@ module Devise
         def invitable
           Object.const_get(:DeviseInvitable).is_a?(Module) rescue false # rubocop:disable Style/RescueModifier
         end
+
+        def i18n
+          Object.const_get(:DeviseI18n).is_a?(Module) rescue false # rubocop:disable Style/RescueModifier
+        end
       end
 
       desc "Copies views styled for Bootstrap 4 via the `bootstrap_form` gem"
@@ -18,7 +22,8 @@ module Devise
 
       def copy_views
         %w[confirmations passwords registrations sessions shared unlocks].each do |dir|
-          directory File.join("views/devise", dir), "app/views/devise/#{dir}"
+          directory File.join("views/#{BootstrapFormGenerator.i18n ? 'i18n' : 'devise'}", dir),
+            "app/views/devise/#{dir}"
         end
 
         if BootstrapFormGenerator.invitable # rubocop:disable Style/GuardClause
