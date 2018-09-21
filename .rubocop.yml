@@ -8,6 +8,7 @@ Style/StringLiterals:
   ConsistentQuotesInMultiline: false
   Exclude:
     - "test/rails_app/app/mailers/*"
+    - "test/es_rails_app/app/mailers/*"
 
 Layout/AlignParameters:
   # Alignment of parameters in multi-line method calls.
@@ -76,10 +77,40 @@ AllCops:
     - test/rails_app/Gemfile
     - test/rails_app/Guardfile
     - test/rails_app/Rakefile
+    - "test/es_rails_app/bin/**/*"
+    - "test/es_rails_app/config/**/*"
+    - test/es_rails_app/config.ru
+    - "test/es_rails_app/db/**/*"
+    - "test/es_rails_app/log/**/*"
+    - "test/es_rails_app/tmp/**/*"
+    - "test/es_rails_app/vendor/**/*"
+    # - test/es_rails_app/config/boot.rb
+    # - test/es_rails_app/config/application.rb
+    # - test/es_rails_app/config/environment.rb
+    # - "test/es_rails_app/config/environments/*"
+    # - "test/es_rails_app/config/initializers/*"
+    # - test/es_rails_app/db/schema.rb
+    - "test/es_rails_app/node_modules/**/*"
+    - "test/es_rails_app/bower_components/**/*"
+    - test/es_rails_app/Gemfile
+    - test/es_rails_app/Guardfile
+    - test/es_rails_app/Rakefile
 
 Metrics/BlockLength:
   Exclude:
     - devise-bootstrap-form.gemspec
+
+Metrics/AbcSize:
+  Exclude:
+    - test/**/*.rb
+
+Metrics/ClassLength:
+  Exclude:
+    - test/**/*.rb
+
+Metrics/MethodLength:
+  Exclude:
+    - test/**/*.rb
 
 # TODO: Remove this when minimum Ruby is 2.3.
 Layout/IndentHeredoc:
