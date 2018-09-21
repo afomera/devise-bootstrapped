@@ -1,7 +1,7 @@
 es:
   activerecord:
     attributes:
-      user:
+      person:
         confirmation_sent_at: Confirmación enviada a
         confirmation_token: Código de confirmación
         confirmed_at: Confirmado en
@@ -26,7 +26,7 @@ es:
         unlock_token: Código de desbloqueo
         updated_at: Actualizado en
     models:
-      user: Usuario
+      person: Usuario
   devise:
     confirmations:
       confirmed: Tu cuenta ha sido confirmada satisfactoriamente.

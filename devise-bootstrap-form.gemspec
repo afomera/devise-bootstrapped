@@ -17,7 +17,8 @@ gem. If you plan to use, or are using, `bootstrap_form` in your app, your Devise
 forms will be consistent with the rest of your forms.
 
 The generator will detect if you're using `devise_invitable`, and will generate
-`bootstrap_form` forms for its views as well.
+`bootstrap_form` forms for its views as well. If you're using `devise-i18n`, the
+forms will use translations.
   DESC
   spec.homepage      = "https://github.com/lcreid/devise-bootstrap-form"
   spec.license       = "MIT"

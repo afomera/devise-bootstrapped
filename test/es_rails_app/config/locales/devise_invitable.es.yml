@@ -1,34 +1,3 @@
-en:
-  devise:
-    failure:
-      invited: "You have a pending invitation, accept it to finish creating your account."
-    invitations:
-      send_instructions: "An invitation email has been sent to %{email}."
-      invitation_token_invalid: "The invitation token provided is not valid!"
-      updated: "Your password was set successfully. You are now signed in."
-      updated_not_active: "Your password was set successfully."
-      no_invitations_remaining: "No invitations remaining"
-      invitation_removed: "Your invitation was removed."
-      new:
-        header: "Send invitation"
-        submit_button: "Send an invitation"
-      edit:
-        header: "Set your password"
-        submit_button: "Set my password"
-    mailer:
-      invitation_instructions:
-        subject: "Invitation instructions"
-        hello: "Hello %{email}"
-        someone_invited_you: "Someone has invited you to %{url}, you can accept it through the link below."
-        accept: "Accept invitation"
-        accept_until: "This invitation will be due in %{due_date}."
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />\nYour account won't be created until you access the link above and set your password."
-  time:
-    formats:
-      devise:
-        mailer:
-          invitation_instructions:
-            accept_until_format: "%B %d, %Y %I:%M %p"
 es:
   devise:
     invitations:
@@ -51,10 +20,10 @@ es:
         someone_invited_you: "Se te ha invitado a %{url}, la puedes aceptar a través del enlace abajo."
         accept: "Accepta la invitación"
         accept_until: "Esta invitación se vence el %{due_date}."
-        ignore: "Si no quieres aceptar la invitiación, no le hagas caso a este correo.<br />\nSe creará la cuenta hasta que accedes al enlace arriba y escojas una contraseña."
-        time:
-          formats:
-            devise:
-              mailer:
-                invitation_instructions:
-                  accept_until_format: "%B %d, %Y %I:%M %p"
+        ignore: "Si no quieres aceptar la invitación, no hagas caso a este correo.<br />\nSe creará la cuenta hasta que accedes al enlace arriba y escojas una contraseña."
+  time:
+    formats:
+      devise:
+        mailer:
+          invitation_instructions:
+            accept_until_format: "%B %d, %Y %I:%M %p"
