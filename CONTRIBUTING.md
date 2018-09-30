@@ -8,12 +8,12 @@ If you find a bug or have an idea for a feature:
 
 ## Testing
 ### Manual and Exploratory Testing
-There is a test app in `test/rails_app`.
+There are test apps in `test/rails_app`, for the default locale, and `es_rails_app` for a Spanish locale.
 
 To use the `devise-bootstrap-form` gem:
 
 ```
-cd rails_app
+cd test/rails_app # or cd test/es_rails_app
 # Generate the view in the test app
 rails g devise:views:bootstrap_form
 rails s -b 0.0.0.0 &
@@ -27,7 +27,7 @@ rake test
 ```
 
 ## Gotchas
-To test that the views work for a model other than the default `User`, the test app uses `Person` as the Devise model. It's a bit frustrating to remember that you can't just cut and paste examples that assume the model is `User`.
+To test that the views work for a model other than the default `User`, the test apps use `Person` as the Devise model. It's a bit frustrating to remember that you can't just cut and paste examples that assume the model is `User`.
 
 ## Coding guidelines
 
