@@ -6,11 +6,6 @@
       <%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
         <%= devise_error_messages! %>
         <br>
-        <!-- FIXME: This isn't in the translation
-        <p class="text-left">
-          Please enter your email address and we will send you a link to reset your password.
-        </p>
-         -->
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         <%= f.form_group do %>
           <%= f.submit t('.send_me_reset_password_instructions'), class: 'btn btn-primary btn-block btn-lg' %>
