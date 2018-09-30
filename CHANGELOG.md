@@ -1,4 +1,4 @@
-## [Pending Release][0.2.0]
+## [Pending Release][0.0.0]
 
 ### Breaking changes
 
@@ -6,12 +6,25 @@
 
 ### New features
 
-* Initial support for internationalization. 
 * Your contribution here!
 
 ### Bugfixes
 
-* Your contribution here!
+* None.
+
+## [0.2.0][] (2018-09-30)
+
+### Breaking changes
+
+* None.
+
+### New features
+
+* Initial support for internationalization.
+
+### Bugfixes
+
+* None.
 
 ## [0.1.0][] (2018-08-27)
 
@@ -26,3 +39,8 @@
 ### Bugfixes
 
 * N/A.
+
+```
+    [0.2.0]: https://github.com/lcreid/devise-bootstrap-form/compare/v0.1.0..v0.2.0
+    [0.1.0]: https://github.com/lcreid/devise-bootstrap-form/compare/...v0.2.0
+```
