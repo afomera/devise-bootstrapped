@@ -4,7 +4,7 @@ require "minitest/autorun"
 
 ENV["RAILS_ENV"] ||= "test"
 
-require "devise/bootstrap_form"
+require "devise_bootstrap_form"
 
 class Test < Rails::Generators::TestCase
   tests Devise::Views::BootstrapFormGenerator

@@ -2,11 +2,11 @@
 
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "devise/bootstrap_form/version"
+# require "devise_bootstrap_form/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "devise-bootstrap-form"
-  spec.version       = Devise::BootstrapForm::VERSION
+  spec.version       = DeviseBootstrapForm::VERSION
   spec.authors       = ["Larry Reid"]
   spec.email         = ["larry.reid@jadesystems.ca"]
 
