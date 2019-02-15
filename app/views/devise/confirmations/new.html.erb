@@ -3,7 +3,7 @@
     <h2 class="text-center">Resend confirmation instructions</h2>
 
     <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-      <%= devise_error_messages! %>
+      <%= render partial: 'devise/shared/error_messages', resource: resource %>
 
       <div class="form-group">
         <%= f.label :email %><br />

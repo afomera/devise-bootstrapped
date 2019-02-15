@@ -2,7 +2,7 @@
   <div class="col-lg-4 col-md-6 ml-auto mr-auto">
     <h2 class="text-center">Reset your password</h2>
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-      <%= devise_error_messages! %>
+      <%= render partial: 'devise/shared/error_messages', resource: resource %>
       <br>
       <p class="text-center">Enter your email address below and we will send you a link to reset your password.</p>
       <div class="form-group">
