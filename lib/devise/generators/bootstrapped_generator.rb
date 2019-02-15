@@ -1,3 +1,4 @@
+require 'rails'
 require 'rails/generators'
 
 module Devise
