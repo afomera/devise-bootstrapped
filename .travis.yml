@@ -5,7 +5,7 @@ rvm:
   - 2.4.3
   # - 2.5.0 The latest version is in the include clause and runs with danger.
 before_install:
-  - gem update --system
+  - gem i rubygems-update -v '<3' && update_rubygems
   - gem install bundler --no-document
 
 matrix:
