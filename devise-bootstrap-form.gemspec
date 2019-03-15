@@ -41,5 +41,6 @@ forms will use translations.
   spec.add_dependency "rails", ">= 5.0.0"
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "chandler"
+  spec.add_development_dependency "pry"
   spec.add_development_dependency "rake", "~> 10.0"
 end
