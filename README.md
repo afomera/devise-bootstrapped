@@ -21,12 +21,19 @@ gem 'devise-bootstrap-form'
 ```
 
 And then execute:
+
 ```bash
 bundle install
 ```
 
 There are additional installation instructions for [`bootstrap_form`](https://github.com/bootstrap-ruby/bootstrap_form#installation),  [`bootstrap`](https://github.com/twbs/bootstrap-rubygem#a-ruby-on-rails), [`devise`](https://github.com/plataformatec/devise) that you must complete before using `devise-bootstrap-form`, and
 [`devise-i18n`](https://github.com/tigrish/devise-i18n).
+
+Note that as of Devise 4.6.0, `devise_error_messages!` is deprecated in favour of the `_error_messages.html.erb` partial. `devise-bootstrap-form` versions 0.3.0 and higher generate views that use the `_error_messages.html.erb` partial. If you need to use `devise_error_messages!`, use this line in your `Gemfile`:
+
+```ruby
+gem 'devise-bootstrap-form', '<= 0.2.0'
+```
 
 ## Usage
 
@@ -50,7 +57,7 @@ To switch back to what Devise gives you, remove the `app/views/devise` folder. Y
 
 Each of the forms in enclosed in the following:
 
-```
+```html
 <div class="devise-bootstrap-form">
   <div class="devise-bootstrap-form-row">
     <div class="devise-bootstrap-form-col">
@@ -62,7 +69,7 @@ Each of the forms in enclosed in the following:
 
 The generator also generates `app/assets/stylesheets/devise_bootstrap_form.scss` that contains the following:
 
-```
+```css
 .devise-bootstrap-form {
   @extend .container;
 }
@@ -81,7 +88,7 @@ The generator also generates `app/assets/stylesheets/devise_bootstrap_form.scss`
 
 You may want to adjust to your own tastes. For example, if the layout used by your Devise views already wraps the view in a `.container`, you can remove the:
 
-```
+```css
 .devise-bootstrap-form {
   @extend .container;
 }
@@ -93,7 +100,7 @@ You can also modify the views to change the surrounding `div`s to your needs, or
 
 If you don't want the `devise_bootstrap_form`-generated styles at all, remove the following line from `app/asserts/application.scss`:
 
-```
+```css
 @include "devise_bootstrap_form.scss";
 ```
 
