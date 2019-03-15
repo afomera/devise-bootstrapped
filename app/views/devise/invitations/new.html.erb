@@ -4,7 +4,7 @@
       <h2 class="text-center"><%= t "devise.invitations.new.header" %></h2>
 
       <%= bootstrap_form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post} do |f| %>
-        <%= devise_error_messages! %>
+        <%= render "devise/shared/error_messages", resource: resource %>
 
       <% resource.class.invite_key_fields.each do |field| -%>
         <%= f.text_field field %>

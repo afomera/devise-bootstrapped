@@ -4,7 +4,7 @@
       <h2 class="text-center"><%= t('.resend_confirmation_instructions') %></h2>
 
       <%= bootstrap_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-        <%= devise_error_messages! %>
+        <%= render "devise/shared/error_messages", resource: resource %>
 
         <%= f.email_field :email,
                           autofocus: true,
