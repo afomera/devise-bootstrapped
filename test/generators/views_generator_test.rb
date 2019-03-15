@@ -66,6 +66,9 @@ class ViewsGeneratorTest < Test
       assert_match(/Didn't receive confirmation instructions\?/, content)
       assert_match(/Didn't receive unlock instructions\?/, content)
     end
+    assert_file "app/views/#{scope}/shared/_error_messages.html.erb" do |content|
+      assert_match(/resource: resource\.class\.model_name\.human\.downcase/, content)
+    end
     assert_file "app/views/#{scope}/unlocks/new.html.erb" do |content|
       assert_match(/Resend unlock instructions/, content)
       assert_match "bootstrap_form_for", content
@@ -105,6 +108,9 @@ class ViewsGeneratorTest < Test
       assert_match(/t\(".forgot_your_password"\)/, content)
       assert_match(/t\('.didn_t_receive_confirmation_instructions'\)/, content)
       assert_match(/t\('.didn_t_receive_unlock_instructions'\)/, content)
+    end
+    assert_file "app/views/#{scope}/shared/_error_messages.html.erb" do |content|
+      assert_match(/resource: resource\.class\.model_name\.human\.downcase/, content)
     end
     assert_file "app/views/#{scope}/unlocks/new.html.erb" do |content|
       assert_match(/t\('.resend_unlock_instructions'\)/, content)

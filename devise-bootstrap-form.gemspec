@@ -37,7 +37,9 @@ forms will use translations.
   spec.require_paths = ["lib"]
 
   spec.add_dependency "bootstrap_form", ">= 4.0.0.alpha1"
-  spec.add_dependency "devise"
+  # Devise deprecated devise_error_messages! at 4.6.0, so for later versions
+  # we add a new partial.
+  spec.add_dependency "devise", ">= 4.6.0"
   spec.add_dependency "rails", ">= 5.0.0"
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "chandler"

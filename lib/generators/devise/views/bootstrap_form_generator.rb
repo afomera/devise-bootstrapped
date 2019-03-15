@@ -26,6 +26,10 @@ module Devise
             "app/views/devise/#{dir}"
         end
 
+        # The shared error message view is already internationalized.
+        copy_file "views/devise/shared/_error_messages.html.erb",
+          "app/views/devise/shared/_error_messages.html.erb"
+
         if BootstrapFormGenerator.invitable # rubocop:disable Style/GuardClause
           %w[invitations mailer].each do |dir|
             directory File.join("views/devise", dir), "app/views/devise/#{dir}"
