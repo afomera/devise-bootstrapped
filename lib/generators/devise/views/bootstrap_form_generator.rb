@@ -21,26 +21,34 @@ module Devise
       source_root File.expand_path("../../../../app", __dir__)
 
       def copy_views
-        %w[confirmations passwords registrations sessions shared unlocks].each do |dir|
-          directory File.join("views/#{BootstrapFormGenerator.i18n ? 'i18n' : 'devise'}", dir),
-            "app/views/devise/#{dir}"
-        end
-
+        copy_base_devise(BootstrapFormGenerator.i18n ? "i18n" : "devise")
         # The shared error message view is already internationalized.
         copy_file "views/devise/shared/_error_messages.html.erb",
           "app/views/devise/shared/_error_messages.html.erb"
-
-        if BootstrapFormGenerator.invitable # rubocop:disable Style/GuardClause
-          %w[invitations mailer].each do |dir|
-            directory File.join("views/devise", dir), "app/views/devise/#{dir}"
-          end
-        end
+        copy_invitable_devise
       end
 
       def copy_assets
         directory "assets/stylesheets", "app/assets/stylesheets"
         append_to_file "app/assets/stylesheets/application.scss" do
           '@import "devise_bootstrap_form";'
+        end
+      end
+
+      private
+
+      def copy_base_devise(source)
+        %w[confirmations passwords registrations sessions shared unlocks].each do |dir|
+          directory File.join("views/#{source}", dir),
+            "app/views/devise/#{dir}"
+        end
+      end
+
+      def copy_invitable_devise
+        if BootstrapFormGenerator.invitable # rubocop:disable Style/GuardClause
+          %w[invitations mailer].each do |dir|
+            directory File.join("views/devise", dir), "app/views/devise/#{dir}"
+          end
         end
       end
     end
