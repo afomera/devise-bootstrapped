@@ -5,8 +5,8 @@
     <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
       <%= render partial: 'devise/shared/error_messages', resource: resource %>
 
-      <div class="form-group">
-        <%= f.label :email %><br />
+      <div class="mb-3">
+        <%= f.label :email, class: 'form-label' %><br />
         <%= f.email_field :email, autofocus: true, class: 'form-control', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
       </div>
 

@@ -4,7 +4,7 @@ require 'rails/generators'
 module Devise
   module Views
     class BootstrappedGenerator < Rails::Generators::Base
-      desc "Copies views styled for Bootstrap 3"
+      desc "Copies views styled for Bootstrap 5"
 
       source_root File.expand_path("../../../..", __FILE__)
 
