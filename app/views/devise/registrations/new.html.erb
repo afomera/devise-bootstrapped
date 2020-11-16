@@ -5,19 +5,19 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render partial: 'devise/shared/error_messages', resource: resource %>
 
-      <div class="form-group">
+      <div class="mb-3">
         <%= f.email_field :email, autofocus: false, class: 'form-control', placeholder: "Email Address" %>
       </div>
 
-      <div class="form-group">
+      <div class="mb-3">
         <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password' %>
       </div>
 
-      <div class="form-group">
+      <div class="mb-3">
         <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirm Password' %>
       </div>
 
-      <div class="form-group">
+      <div class="mb-3">
         <%= f.submit "Sign up", class: "btn btn-primary btn-block btn-lg" %>
       </div>
     <% end %>

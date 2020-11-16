@@ -3,11 +3,11 @@
     <h1 class="text-center">Log in</h1>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-group">
+      <div class="mb-3">
         <%= f.email_field :email, autofocus: true, placeholder: 'Email Address', class: 'form-control' %>
       </div>
 
-      <div class="form-group">
+      <div class="mb-3">
         <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control' %>
       </div>
 
@@ -20,7 +20,7 @@
         </div>
       <% end -%>
 
-      <div class="form-group">
+      <div class="mb-3">
         <%= f.submit "Log in", class: "btn btn-primary btn-block btn-lg" %>
       </div>
     <% end %>
