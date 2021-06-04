@@ -17,7 +17,7 @@ gem 'devise-bootstrapped'
 A Bootstrap v4 version is available if you use the bootstrap4 branch from github
 
 ```ruby
-gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
+gem 'devise-bootstrapped', github: 'afomera/devise-bootstrapped', branch: 'bootstrap4'
 ```
 
 And then execute:
@@ -39,7 +39,7 @@ To upgrade to v4 you can force override the views, or you can modify each view's
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/king601/devise-bootstrapped. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/afomera/devise-bootstrapped. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
