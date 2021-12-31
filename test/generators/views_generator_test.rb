@@ -17,7 +17,7 @@ class ViewsGeneratorTest < Test
 
   test "generate views with invitable" do
     Object.send(:remove_const, :DeviseI18n) if (Object.const_get(:DeviseI18n).is_a?(Module) rescue false) # rubocop:disable Style/RescueModifier
-    module ::DeviseInvitable; end; # rubocop:disable Style/ClassAndModuleChildren
+    module ::DeviseInvitable; end # rubocop:disable Lint/ConstantDefinitionInBlock
     run_generator
     assert_files
     assert_invitable_files
@@ -25,7 +25,7 @@ class ViewsGeneratorTest < Test
 
   test "generate views with i18n" do
     Object.send(:remove_const, :DeviseInvitable) if (Object.const_get(:DeviseInvitable).is_a?(Module) rescue false) # rubocop:disable Style/RescueModifier
-    module ::DeviseI18n; end; # rubocop:disable Style/ClassAndModuleChildren
+    module ::DeviseI18n; end # rubocop:disable Lint/ConstantDefinitionInBlock
     run_generator
     assert_i18n_files
     assert_no_invitable_files

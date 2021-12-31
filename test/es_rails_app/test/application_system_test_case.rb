@@ -12,9 +12,9 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
   Capybara.app_host = "http://localhost:3001"
 
   driven_by :selenium,
-    using: :headless_chrome,
-    options: { args: ["headless", "disable-gpu", "no-sandbox", "disable-dev-shm-usage"] },
-    screen_size: [1400, 1400]
+            using: :headless_chrome,
+            options: { args: %w[headless disable-gpu no-sandbox disable-dev-shm-usage] },
+            screen_size: [1400, 1400]
 
   def setup
     super

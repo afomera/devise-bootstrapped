@@ -31,6 +31,8 @@ forms will use translations.
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
 
+  spec.required_ruby_version = ">= 2.6"
+
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
@@ -41,8 +43,11 @@ forms will use translations.
   # we add a new partial.
   spec.add_dependency "devise", ">= 4.6.0"
   spec.add_dependency "rails", ">= 5.0.0"
-  spec.add_development_dependency "bundler", "~> 1.12"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "chandler"
   spec.add_development_dependency "pry"
   spec.add_development_dependency "rake"
+  spec.metadata = {
+    "rubygems_mfa_required" => "true"
+  }
 end

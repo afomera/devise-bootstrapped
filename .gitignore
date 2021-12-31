@@ -7,9 +7,21 @@
 /pkg/
 /tmp/
 *.gem
+.cache/
 
 .vagrant/
 # For some reason, the test cases generate the mailer views in this directory,
 # as well as the `test/rails_app/app/views/devise/mailer` directory.
 # TODO: Figure out why and stop it from happening.
 # app/views/devise/mailer/
+
+# or .local/share/pry/pry_history if you need to be more exact
+.local/
+.irb_history
+.byebug_history
+# For Debian images with Bash
+.bash_history
+# For Alpine images
+.ash_history
+
+vendor/bundle
