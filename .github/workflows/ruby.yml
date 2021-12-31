@@ -34,8 +34,8 @@ jobs:
           - { ruby-version: '3.0', gemfile: "5.2" }
           - { ruby-version: '2.6', gemfile: "edge" }
           - { ruby-version: '2.6', gemfile: "7.0" }
-    env:
-      BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}.gemfile
+    # env:
+    #   BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}.gemfile
     steps:
       - uses: actions/checkout@v2
       - name: Set up Ruby
