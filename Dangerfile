@@ -24,7 +24,7 @@ if has_lib_changes && !has_test_changes
   warn("There are code changes, but no corresponding tests. "\
        "Please include tests if this PR introduces any modifications in "\
        "#{project_name}'s behavior.",
-    sticky: false)
+       sticky: false)
 end
 
 # ------------------------------------------------------------------------------

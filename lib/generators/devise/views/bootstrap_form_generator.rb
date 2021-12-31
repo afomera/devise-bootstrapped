@@ -24,7 +24,7 @@ module Devise
         copy_base_devise(BootstrapFormGenerator.i18n ? "i18n" : "devise")
         # The shared error message view is already internationalized.
         copy_file "views/devise/shared/_error_messages.html.erb",
-          "app/views/devise/shared/_error_messages.html.erb"
+                  "app/views/devise/shared/_error_messages.html.erb"
         copy_invitable_devise
       end
 
@@ -40,7 +40,7 @@ module Devise
       def copy_base_devise(source)
         %w[confirmations passwords registrations sessions shared unlocks].each do |dir|
           directory File.join("views/#{source}", dir),
-            "app/views/devise/#{dir}"
+                    "app/views/devise/#{dir}"
         end
       end
 

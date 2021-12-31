@@ -10,4 +10,5 @@ group :development do
   gem "chandler", ">= 0.7.0"
   # gem "htmlbeautifier"
   gem "rubocop", require: false
+  gem "rubocop-rake", require: false
 end

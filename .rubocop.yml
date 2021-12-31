@@ -51,10 +51,10 @@ Layout/LineLength:
 
 # Rails 5 only requires 2.2.2.
 AllCops:
+  NewCops: enable
   DisplayCopNames: true
   DisplayStyleGuide: true
-  TargetRubyVersion: 2.2
-  # TargetRubyVersion: <%= RUBY_VERSION[/\d+\.\d+/] %>
+  TargetRubyVersion: 2.6
   Exclude:
     - Capfile
     - Gemfile
@@ -82,6 +82,7 @@ AllCops:
     - test/es_rails_app/Gemfile
     - test/es_rails_app/Guardfile
     - test/es_rails_app/Rakefile
+    - vendor/bundle/**/*
 
 Metrics/BlockLength:
   Exclude:
