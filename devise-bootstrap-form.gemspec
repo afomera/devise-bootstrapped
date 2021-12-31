@@ -41,7 +41,7 @@ forms will use translations.
   # we add a new partial.
   spec.add_dependency "devise", ">= 4.6.0"
   spec.add_dependency "rails", ">= 5.0.0"
-  spec.add_development_dependency "bundler", "~> 1.12"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "chandler"
   spec.add_development_dependency "pry"
   spec.add_development_dependency "rake"
