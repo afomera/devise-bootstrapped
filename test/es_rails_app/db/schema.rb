@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2018_08_25_021257) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "people", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -36,7 +33,7 @@ ActiveRecord::Schema.define(version: 2018_08_25_021257) do
     t.datetime "invitation_accepted_at"
     t.integer "invitation_limit"
     t.string "invited_by_type"
-    t.bigint "invited_by_id"
+    t.integer "invited_by_id"
     t.integer "invitations_count", default: 0
     t.index ["confirmation_token"], name: "index_people_on_confirmation_token", unique: true
     t.index ["email"], name: "index_people_on_email", unique: true

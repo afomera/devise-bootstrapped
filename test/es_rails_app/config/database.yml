@@ -1,23 +1,18 @@
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  adapter: sqlite3
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: localhost
-  username: pg
-  password: pg
+  timeout: 5000
 
 development:
   <<: *default
-  database: rails_app_development
+  database: db/development.sqlite3
 
 test:
   <<: *default
-  database: rails_app_test
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: rails_app_production
-  username: rails_app
-  password: <%= ENV['RAILS_APP_DATABASE_PASSWORD'] %>
+  database: db/production.sqlite3

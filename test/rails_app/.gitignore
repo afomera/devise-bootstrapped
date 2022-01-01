@@ -23,6 +23,8 @@
 /public/assets
 .byebug_history
 
+db/*.sqlite3
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
@@ -32,3 +34,14 @@ app/views/devise
 app/assets/stylesheets/devise_bootstrap_form.scss
 
 Gemfile.lock
+
+# or .local/share/pry/pry_history if you need to be more exact
+.local/
+.irb_history
+.byebug_history
+# For Debian images with Bash
+.bash_history
+# For Alpine images
+.ash_history
+
+vendor/bundle
